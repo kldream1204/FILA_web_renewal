@@ -5,7 +5,7 @@ const Container = styled.div`
     width: 100%;
     height: 70px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     padding: 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -30,9 +30,12 @@ const Content = styled.div`
     font-weight: bold;
     color: #666666;
     ul {
+        height: 100%;
         font-size: 13px;
         letter-spacing: 3px;
         li {
+            height: 100%;
+            line-height: 70px;
             margin-left: 10px;
         };
         li:nth-child(6) {

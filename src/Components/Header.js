@@ -30,10 +30,10 @@ const Content = styled.div`
         padding-right: 3px;
     };
     ul {
+        width: 300px;
         height: 100%;
-        align-items:center;
+        justify-content: space-between;
         a {
-            margin-left: 35px;
             li {
                 height: 100%;
                 line-height: 70px;
@@ -65,11 +65,11 @@ const Header = () => (
         </Content>
         <Content>
             <ul>
-                <a href="#"><li>로그인</li></a>
-                <a href="#"><li>회원가입</li></a>
-                <a href="#"><li>고객센터</li></a>
-                <a href="#"><li>주문/배송</li></a>
-                <a href="#">
+                <a href="/#"><li>로그인</li></a>
+                <a href="/#"><li>회원가입</li></a>
+                <a href="/#"><li>고객센터</li></a>
+                <a href="/#"><li>주문/배송</li></a>
+                <a href="/#">
                     <li>
                         <i className="fas fa-shopping-bag"></i>
                     </li>

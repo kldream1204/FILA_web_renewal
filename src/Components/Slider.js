@@ -48,6 +48,7 @@ class Slider extends React.Component {
             width: 800%;
             height: 100%;
             display: flex;
+            
             div:first-child {
                 background-position: 0 80%;
             };
@@ -84,7 +85,7 @@ class Slider extends React.Component {
             div:first-child {
                 border: 1px solid white;
                 border-radius: 20px;
-                padding: 7px 20px;
+                padding: 8px 20px;
             }
             div:last-child {
                 width: 200px;

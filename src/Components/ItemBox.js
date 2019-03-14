@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BestData from "../Data/BestData";
 import Box from "./Box";
 
 const Container = styled.div`
@@ -26,15 +25,15 @@ const Content = styled.div`
     grid-gap: 50px 15px;
 `;
 
-const BestItem = () => (
+const ItemBox = ({data}) => (
     <Container>
         <Title>
-            {BestData.name}
+            {data.name}
         </Title>
         <Content>
-            {BestData.infos.map( info => <Box photo={info.photo} name={info.name} detail={info.detail} price={info.price} key={info.id}/>)}
+            {data.infos.map( info => <Box photo={info.photo} name={info.name} detail={info.detail} price={info.price} key={info.id}/>)}
         </Content>
     </Container>
 )
 
-export default BestItem;
+export default ItemBox;

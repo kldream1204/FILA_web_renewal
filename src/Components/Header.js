@@ -10,11 +10,31 @@ const Container = styled.div`
     align-items: center;
     padding: 0 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 769px) {
+        padding: 0 20px;
+    }
+    div:first-child {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
     div:nth-child(2) {
         justify-content: center;
+        @media (max-width: 1024px) {
+            justify-content: flex-start;
+        }
+        div:first-child {
+            @media (max-width: 1024px) {
+                display: block;
+            }
+    }
     };
     div:last-child {
         justify-content: flex-end;
+        }
     };
 `;
 
@@ -33,7 +53,22 @@ const Content = styled.div`
         width: 300px;
         height: 100%;
         justify-content: space-between;
+        @media (max-width: 769px) {
+            width: 150px;
+            a:first-child {
+                display: block;
+            }
+            a:nth-child(4) {
+                display: block;
+            }
+            a:last-child {
+                display: block;
+            }
+        }
         a {
+            @media (max-width: 769px) {
+                display: none;
+            }
             li {
                 height: 100%;
                 line-height: 70px;

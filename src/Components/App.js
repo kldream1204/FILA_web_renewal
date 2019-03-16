@@ -19,18 +19,20 @@ class App extends Component {
       <>
         <Header/>
         <GlobalNavi/>
-        <Slider/>
-        <ItemBox data={BestData}/>
-        <SideAdd data={AddData}/>
-        <ItemBox data={ShoesData}/>
-        <SideAdd data={KidAddData}/>
-        <ItemBox data={KidData}/>
-        <BottomAdd/>
-        <Footer/>
         <GlobalStyle/>
+       
       </>
     );
   }
 }
 
 export default App;
+
+//<Slider/>
+//<ItemBox data={BestData}/>
+//<SideAdd data={AddData}/>
+//<ItemBox data={ShoesData}/>
+//<SideAdd data={KidAddData}/>
+//<ItemBox data={KidData}/>
+//<BottomAdd/>
+//<Footer/>

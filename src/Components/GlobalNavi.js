@@ -71,13 +71,21 @@ const Content = styled.div`
         i {
             font-size: 20px;
         };
+        @media (max-width: 1024px) {
+            display: none;
+        }
     };
+    span {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
 `;
 
 const GlobalNavi = () => (
     <Container>
         <Content>
-            기획전&이벤트
+            <span>기획전&이벤트</span>
         </Content>
         <Content>
             <ul>

@@ -16,6 +16,7 @@ const Header = styled.div`
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 10px;
         ul:last-child {
             margin-right: 100px;
         }

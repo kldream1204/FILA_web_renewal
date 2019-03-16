@@ -8,6 +8,7 @@ const Container = styled.div`
     height: 1650px;
     margin: 0 auto;
     margin-top: 65px;
+    padding: 0 10px;    
 `;
  
 const Title = styled.div`

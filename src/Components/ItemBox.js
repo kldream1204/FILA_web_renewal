@@ -9,6 +9,9 @@ const Container = styled.div`
     margin: 0 auto;
     margin-top: 40px;
     padding: 0 10px;
+    @media (max-width: 769px) {
+        height: 430px;
+    }
 `;
 
 const Title = styled.div`
@@ -24,6 +27,16 @@ const Content = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 50px 15px;
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        overflow: hidden;
+    }
+    @media (max-width: 769px) {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 250px;
+        overflow: scroll;
+    }
 `;
 
 const ItemBox = ({data}) => (

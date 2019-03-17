@@ -18,6 +18,9 @@ const Content = styled.div`
     padding: 20px;
     font-size: 13px;
     color: #666666;
+    @media (max-width: 1024px) {
+        display: block;
+    }
 `;
 
 const Name = styled.div`

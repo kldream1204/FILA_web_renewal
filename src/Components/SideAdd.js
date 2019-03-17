@@ -9,6 +9,13 @@ const Container = styled.div`
     height: 400px;
     margin: 0 auto;
     margin-top: 80px;
+    @media (max-width: 1024px) {
+        margin-top: 0;
+        height: 300px;
+    }
+    @media (max-width: 769px) {
+        height: 200px;
+    }
 `;
 
 const AddFirst = styled.div`
@@ -46,10 +53,19 @@ const SubTitle = styled.div`
 
 const Title = styled.div`
     text-align: center;
-    width: 35%;
+    width: 40%;
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 50px;
+    @media (max-width: 1024px) {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    @media (max-width: 769px) {
+        width: 80%;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
 `;
 
 const More = styled.div`

@@ -42,6 +42,12 @@ class Slider extends React.Component {
             height: 500px;
             overflow: hidden;
             position: relative;
+            @media (max-width: 1024px) {
+                height: 400px;
+            }
+            @media (max-width: 769px) {
+                height: 300px;
+            }
         `;
 
         const SlideContainer = styled.div`

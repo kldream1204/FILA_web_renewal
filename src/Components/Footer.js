@@ -10,6 +10,9 @@ const Header = styled.div`
     width: 100%;
     height: 250px;
     background-color: rgba(0, 0, 0, 0.1);
+    @media (max-width: 769px) {
+        height: 400px;
+    } 
     div {
         display:  flex;
         justify-content: space-between;
@@ -17,8 +20,16 @@ const Header = styled.div`
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 10px;
+        @media (max-width: 769px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+        } 
         ul:last-child {
             margin-right: 100px;
+            @media (max-width: 1024px) {
+                margin-right: 0;
+        }
         }
     }
     ul {
@@ -43,7 +54,7 @@ const Main = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     div {
         display: flex;
         flex-direction: column;
@@ -56,6 +67,14 @@ const Main = styled.div`
         font-size: 13px;
         color: #666666;
         margin-bottom: 15px;
+        @media (max-width: 769px) {
+            width: 100%;
+            height: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
         li:nth-child(2) {
             font-weight: bold;
         }
@@ -64,6 +83,7 @@ const Main = styled.div`
         width: 180px;
         display: flex;
         justify-content: space-between;
+        
         li {
             display: flex;
             justify-content: center;
@@ -90,6 +110,12 @@ const Bottom = styled.div `
     justify-content: space-around;
     font-size: 13px;
     color: #666666;
+    @media (max-width: 1024px) {
+            font-size: 11px;
+        }
+    @media (max-width: 769px) {
+            font-size: 10px;
+        }    
     div:first-child {
         text-align: center; 
         color: black;

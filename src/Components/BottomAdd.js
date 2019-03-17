@@ -8,7 +8,13 @@ const Container = styled.div`
     height: 1650px;
     margin: 0 auto;
     margin-top: 65px;
-    padding: 0 10px;    
+    padding: 0 10px; 
+    @media (max-width: 1024px) {
+        height: 3100px;
+    }
+    @media (max-width: 769px) {
+        height: 6000px;
+    }   
 `;
  
 const Title = styled.div`
@@ -27,7 +33,13 @@ const AddContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 45px;
-`;
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 769px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+`;  
 
 const Add = styled.div``;
 

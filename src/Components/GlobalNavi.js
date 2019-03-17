@@ -9,12 +9,22 @@ const Container = styled.div`
     align-items: center;
     padding: 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @media (max-width: 1024px) {
+        grid-template-columns: 3fr 1fr;
+    }
     div:first-child {
         padding: 0 20px;
         letter-spacing: 3px;
+        @media (max-width: 1024px) {
+            display: none;
+        }
     };
     div:nth-child(2) {
         justify-content: center;
+        @media (max-width: 1024px) {
+            padding: 0 10px;
+            justify-content: flex-start;
+        }
     };
     div:last-child {
         justify-content: flex-end;
@@ -37,6 +47,9 @@ const Content = styled.div`
             height: 100%;
             line-height: 70px;
             margin-left: 10px;
+            @media (max-width: 769px) {
+                display: none;
+            }
         };
         li:nth-child(6) {
             color: #CF2E36;
@@ -44,12 +57,20 @@ const Content = styled.div`
                 color: #666666;
             };
         };
-        li:last-child {
+        li:nth-child(7) {
             color: #CF2E36;
             ::first-letter {
                 color: #666666;
             };
         };
+        li:last-child {
+            display:none;
+            font-size: 24px;
+            margin: 0;
+            @media (max-width: 769px) {
+                display: block;
+            }
+        }
     };
     form {
         width: 240px;
@@ -58,7 +79,10 @@ const Content = styled.div`
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);  
+        @media (max-width: 1024px) {
+                display: none;
+            }
         input {
             width: 200px;
             height: 100%;
@@ -69,15 +93,15 @@ const Content = styled.div`
             outline: none;
         };
         i {
-            font-size: 20px;
+            font-size: 20px;         
         };
+    }
+    i:nth-child(2) {
+        display: none;
+        font-size: 20px;  
+        padding: 0 10px;
         @media (max-width: 1024px) {
-            display: none;
-        }
-    };
-    span {
-        @media (max-width: 1024px) {
-            display: none;
+            display: block;
         }
     }
 `;
@@ -96,13 +120,17 @@ const GlobalNavi = () => (
                 <li>-&nbsp;&nbsp;BRAND</li>
                 <li>-&nbsp;&nbsp;NEW</li>
                 <li>-&nbsp;&nbsp;BEST</li>
+                <li>
+                    <i className="fas fa-bars"></i>
+                </li>
             </ul>
         </Content>
-        <Content>
+        <Content>   
             <form>
                 <input type="text" placeholder="FILA"/>
                 <i className="fas fa-search"></i>
             </form>
+            <i className="fas fa-search"></i>
         </Content>
     </Container>
 )
